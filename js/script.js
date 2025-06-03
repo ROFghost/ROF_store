@@ -19,29 +19,3 @@ $("#carouselExample").carousel({
   keyboard: true,
   pause: "hover",
 });
-
-const slides = document.querySelectorAll(".slide");
-const prevBtn = document.querySelectorAll(".prev");
-const nextBtn = document.querySelectorAll(".next");
-
-let currentslide = 0;
-
-function showslide(index) {
-  slides.forEach((slide) => slide.classList.remove("active"));
-  slides[index].classlist.add("active");
-}
-
-function nextslide() {
-  currentslide = (currentslide + 1) % slide.length;
-  showslide(currentslide);
-}
-
-function prevslide() {
-  currnetslide = (currentslide - 1 + slide.length) % slides.length;
-  showslide(currentslide);
-}
-
-prevBtn.addEventListener("click", prevslide);
-nextBtn.addEventListener("click", nextslide);
-
-showslide(0);
