@@ -20,6 +20,7 @@ body {
   font-family: "cal sans", sans-serif;
   background-color: var(--bg);
   color: #ffffff;
+  min-height: 5000px;
 }
 
 /*  navbar */
@@ -165,31 +166,70 @@ body {
   color: rgba(7, 7, 7, 0.495);
 }
 
-.about .row {
+.about .slides {
+  width: 100%;
+  position: relative;
+}
+
+.about .slides .slide {
+  display: none;
+}
+
+.about .slides .slide img {
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+.about .slides .navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-}
-
-.about .row .about-img {
-  flex: 1 1 45rem;
-}
-
-.about .row .about-img img {
+  justify-content: space-between;
   width: 100%;
 }
 
+.about .slides .navigation .prev,
+.slides .navigation .next {
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #858585;
+  background: rgba(133, 133, 133, 0.24);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.about .slides .navigation .prev:hover,
+.slides .navigation .next:hover {
+  background: rgba(255, 255, 255, 0.973);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .about .row .content {
-  flex: 1 1 35rem;
+  flex: 3 3 35rem;
   padding: 0 1rem;
 }
 
 .about .row .content h3 {
-  font-size: 1.8rem;
+  font-size: 4.8rem;
   margin-bottom: 1rem;
 }
 
-.about .row .content p {
+.about.row .content p {
   margin-bottom: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 4rem;
   font-weight: 100;
   line-height: 1.6;
 }
@@ -199,8 +239,7 @@ body {
 .contact h2 {
   margin-bottom: 1rem;
 }
-.menu p,
-.contact p {
+.menu p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -217,12 +256,13 @@ body {
 
 .menu .row .menu-card {
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 .menu .row .menu-card img {
-  border-radius: 35%;
-  width: 40%;
+  display: center;
+  border-radius: 20%;
+  width: 50%;
 }
 
 .menu .row .menu-card .menu-card-tittle {
@@ -240,6 +280,14 @@ body {
   flex: 1 1 45rem;
   width: 100%;
   object-fit: cover;
+}
+
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
 }
 
 .contact .row form {

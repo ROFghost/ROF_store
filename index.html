@@ -57,16 +57,58 @@
     <section id="about" class="about">
       <h2><span>about</span> us</h2>
 
-      <div class="row">
-        <div class="about-img">
-          <img src="img/about.jpg" alt="about us" />
+      <div class="slides">
+        <div class="slide">
+          <img src="img/about/about.jpg" alt="about us" />
         </div>
-        <div class="content">
-          <h3>you must choose us</h3>
-          <p>
-            because, we combine two elements into one and make it beyond human
-            expectation.
-          </p>
+        <div class="slide">
+          <img src="img/about/ss.jpg" alt="about us" />
+        </div>
+        <div class="slide">
+          <img src="img/about/se.jpg" alt="about us" />
+        </div>
+        <div class="slide">
+          <img src="img/about/ea.jpg" alt="about us" />
+        </div>
+        <div class="navigation">
+          <a class="prev" onclick="plusslides(-1)">&#10094;</a>
+          <a class="next" onclick="plusslides(-1)">&#10095;</a>
+        </div>
+
+        <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusslides(n) {
+            showSlides((slideIndex += n));
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+          }
+        </script>
+
+        <div class="row">
+          <div class="content">
+            <h3>you must choose us</h3>
+            <p>
+              because, we combine two elements into one and make it beyond human
+              expectation. what is it?, we include nft elements in our product
+              design in addition to style, we also try to innovate using nft,
+              not only about art, it's also about style.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -122,6 +164,11 @@
         </div>
         <div class="menu-card">
           <img src="img/T-shirt1/9.jpg" alt="ghost-angle" />
+          <h3 class="menu-card-tittle">t-shirt</h3>
+          <p class="menu-card-price">IDR 35k</p>
+        </div>
+        <div class="menu-card">
+          <img src="img/T-shirt1/10.jpg" alt="ghost-king" />
           <h3 class="menu-card-tittle">t-shirt</h3>
           <p class="menu-card-price">IDR 35k</p>
         </div>
