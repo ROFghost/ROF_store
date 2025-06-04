@@ -14,7 +14,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-$("#carouselExample").carousel({
+$("#slideIndex").showSlide({
   interval: 2000,
   keyboard: true,
   pause: "hover",

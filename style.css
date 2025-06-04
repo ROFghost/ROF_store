@@ -20,7 +20,6 @@ body {
   font-family: "cal sans", sans-serif;
   background-color: var(--bg);
   color: #ffffff;
-  min-height: 5000px;
 }
 
 /*  navbar */
